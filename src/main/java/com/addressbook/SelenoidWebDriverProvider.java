@@ -21,6 +21,7 @@ public class SelenoidWebDriverProvider {
             profile.setPreference("dom.webnotifications.enabled", false);
             profile.setPreference("dom.push.enabled", false);
             capabilities.setCapability(FirefoxDriver.PROFILE, profile);
+
             RemoteWebDriver driver = new RemoteWebDriver(
                     URI.create("http://localhost:4444/wd/hub").toURL(),
                     capabilities

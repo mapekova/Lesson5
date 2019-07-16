@@ -12,12 +12,12 @@ public class GroupCreationTests extends TestBase {
 
     @Test
     public void groupCreationTest() throws Exception {
-        app.goToGroupPage();
+        app.getNavigationHelper().goToGroupPage();
         // for (int i=0; i<20; i++) {
-        app.initGroupCreation();
-        app.fillGroupForm(new GroupData("marianna", "ape", "footer"));
-        app.submitGroupCreation();
-        app.returnToGroupPage();
+        app.getGroupHelper().initGroupCreation();
+        app.getGroupHelper().fillGroupForm(new GroupData("marianna", "ape", "footer"));
+        app.getGroupHelper().submitGroupCreation();
+        app.getGroupHelper().returnToGroupPage();
         // }
 
     }
@@ -25,7 +25,7 @@ public class GroupCreationTests extends TestBase {
     @Test
     public void groupDeletionTest() throws Exception {
 
-        app.goToGroupPage();
+        app.getNavigationHelper().goToGroupPage();
         app.selectElements();
         app.deleteElements();
 
